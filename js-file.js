@@ -1,3 +1,26 @@
+var button = document.querySelector('button');
+button.onclick = function playGame() {
+
+    document.querySelector('#container').innerHTML = '';
+
+    var x = window.prompt("Enter a value between 1 and 100");
+
+    createGrid(x); 
+
+    const squareHover = document.getElementsByClassName('square'); 
+
+
+    Array.from(squareHover).forEach((square) => {
+
+        square.addEventListener('mouseover', () => {
+
+            square.style.backgroundColor = "yellow"; 
+        })
+    })
+
+}
+
+
 function createGrid(x) {
 
     const grid = document.querySelector('#container') 
@@ -10,7 +33,7 @@ function createGrid(x) {
         row.setAttribute('style', 'display: block; float: left; width: 100%'); 
             for (j = 0; j < x; j++) {
                 const square = document.createElement('div'); 
-                    square.className = "square";  
+                    square.className = "square";   
                     square.setAttribute('style', `border: 1px solid black`); 
                     square.style.display = "inline-block";
                     square.style.float = "left"; 
@@ -21,8 +44,8 @@ function createGrid(x) {
                     square.style.width = width;
                     square.style.height = height;
                     // square.style.width = "50px"; 
-                    console.log(width);
-                    console.log(square.style.width);
+                    // console.log(width);
+                    // console.log(square.style.width);
                     // square.style.height = `960/${x}`;   
 
                     row.appendChild(square); 
@@ -33,6 +56,4 @@ function createGrid(x) {
     }
     
     
-}
-
-createGrid(16); 
+} 
