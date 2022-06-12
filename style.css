@@ -1,9 +1,19 @@
 #etch-title {
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 #container {
-width: 960px;
-height: auto;
+    width: 960px;
+    height: auto;
 }
 
+.button {
+    margin-left: 625px;    
+    background-color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 5px;
+    width: 70px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}

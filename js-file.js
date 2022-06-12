@@ -1,6 +1,8 @@
 var button = document.querySelector('button');
 button.onclick = function playGame() {
 
+    button.textContent = "Reset"; 
+    
     document.querySelector('#container').innerHTML = '';
 
     var x = window.prompt("Enter a value between 1 and 100");
@@ -9,12 +11,14 @@ button.onclick = function playGame() {
 
     const squareHover = document.getElementsByClassName('square'); 
 
+    
 
     Array.from(squareHover).forEach((square) => {
 
         square.addEventListener('mouseover', () => {
 
-            square.style.backgroundColor = "yellow"; 
+            var randomColor = Math.floor(Math.random()*16777215).toString(16);
+            square.style.backgroundColor = "#" + randomColor; 
         })
     })
 
